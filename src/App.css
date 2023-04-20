@@ -1,34 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+header {
+  background: rgb(241, 198, 86);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul li .link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  font-family: "Lobster", cursive;
+}
+
+html {
+  cursor: none;
+  width: 100%;
+}
+/* .frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: white;
+  filter: contrast(30);
+  z-index: -999;
+} */
+
+.cursor {
+  position: absolute;
+  /* top: 300px;
+  left: 320px; */
+  width: 55px;
+  height: 55px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-top: -6px;
+  margin-left: -5px;
+  /* filter: blur(15px); */
+}
+.cursor:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  left: 45px;
+  background: black;
+  border-radius: 50%;
+  transform-origin: -25px 30px;
+  transform: rotate(50px);
+  -webkit-animation: rotate 3.5s ease-in-out infinite;
+  animation: rotate 3.5s ease-in-out infinite;
+  /* filter: blur(3px); */
+}
+.cursor:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+  transform-origin: 20px 45px;
+  top: -25px;
+  right: 14px;
+  transform: rotate(300px);
+  -webkit-animation: rotate 3.5s ease-in-out infinite;
+  animation: rotate 3.5s ease-in-out infinite;
+  /* filter: blur(3px); */
+}
+.finger {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+  transform-origin: 50px 50px;
+  top: -5px;
+  right: 45px;
+  transform: rotate(300px);
+  -webkit-animation: rotate 3.5s ease-in-out infinite;
+  animation: rotate 3.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
